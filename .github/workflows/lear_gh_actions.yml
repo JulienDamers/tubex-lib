@@ -1,0 +1,6 @@
+name: build-ibex
+on: [push]
+jobs:
+  runs_on: ubuntu-latest
+  steps:
+    - run: pwd
