@@ -1,14 +1,14 @@
 #include <cstdio>
 #include "catch_interval.hpp"
-#include "tubex_VIBesFigTube.h"
-#include "tubex_CtcDelay.h"
+#include "codac_VIBesFigTube.h"
+#include "codac_CtcDelay.h"
 #include "vibes.h"
 
 using namespace Catch;
 using namespace Detail;
 using namespace std;
 using namespace ibex;
-using namespace tubex;
+using namespace codac;
 
 #define VIBES_DRAWING 0
 
@@ -24,7 +24,7 @@ TEST_CASE("CtcDelay")
     Interval pi = Interval::pi();
     ctc_delay.contract(pi, x, y);
 
-    if(false)
+    if(VIBES_DRAWING)
     {
       vibes::beginDrawing();
       VIBesFigTube fig_x("delay x", &x);
@@ -51,7 +51,7 @@ TEST_CASE("CtcDelay")
     ctc_delay.contract(delay, x, y);
     ctc_delay.contract(delay, x, y);
 
-    if(false)
+    if(VIBES_DRAWING)
     {
       vibes::beginDrawing();
       VIBesFigTube fig_x("delay x", &x);
